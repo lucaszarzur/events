@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "e22ba513-ec5a-40b6-9301-4197a6ae8dee",
+		"name": "Eventos API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Evento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"CodeCraft Summit 2027\",\n  \"location\": \"Online\",\n  \"price\": 0.0,\n  \"startDate\": \"2027-03-16\",\n  \"endDate\": \"2027-03-18\",\n  \"startTime\": \"19:00:00\",\n  \"endTime\": \"21:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Eventos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Evento pelo Pretty Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events/codecraft-summit-2027",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						"codecraft-summit-2027"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar inscrição",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Lucas Zarzur\",\n    \"email\": \"lucas12zarzur@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription/codecraft-summit-2027",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription",
+						"codecraft-summit-2027"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar inscrição - Com indicação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Peter Parker\",\n    \"email\": \"peter@spiderman.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription/codecraft-summit-2027/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription",
+						"codecraft-summit-2027",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar ranking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subscription/codecraft-summit-2027/ranking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription",
+						"codecraft-summit-2027",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar ranking - Por usuário",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subscription/codecraft-summit-2027/ranking/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription",
+						"codecraft-summit-2027",
+						"ranking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
